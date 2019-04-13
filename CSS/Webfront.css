@@ -1,0 +1,198 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3a3a3a;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+body {
+  background-image: url(../Images/websitebg.jpg);
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-size: 1280px 820px;
+}
+
+
+nav {
+  margin: 0;
+  padding: 20px 0;
+}
+
+nav li {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  display: inline;
+  padding-right: 250px;
+  width: 80px;
+  text-transform: uppercase;
+}
+
+main {
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+
+main h1 {
+  color: #3a3a3a;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  font-size: 60px;
+  margin-top: 0px;
+  padding-top: 100px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  position: center;
+
+}
+
+main h4{
+  color: #2a2a2a;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  position: relative;
+}
+
+footer p {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.jumbotron {
+  height: 800px;
+  background-image: url("https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwi9oJXtkdzdAhUsLcAKHdLYDFcQjRx6BAgBEAU&url=https%3A%2F%2Fallevents.in%2Fchelmsford%2Fdeep-culture-at-ctzn%2F20006776387127&psig=AOvVaw37p5XcVCfiA0sYRieV26Al&ust=1538170519195583");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.textbody {
+  position: inline;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 600px;
+  height: 200px;
+  background-color: #3a3a3a;
+  border-radius: 3px;
+  display: inline-block;
+  opacity: 0.7;
+}
+
+.textbody h2 {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+}
+
+.textbody p {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
+}
+
+.btn-main {
+  background-color: #333;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;  
+  margin-bottom: 20px;      
+}
+
+.supporting {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.supporting .col {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  height: 200px;
+  width: 200px;
+}
+
+.supporting img {
+  height: 32px;
+}
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.supporting a {
+  background-color: white;
+  color: #333333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #333333; 
+}
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 50px;
+    padding: 0 40px;
+  }
+
+  .supporting .col {
+    width: 100%;
+  }
+}

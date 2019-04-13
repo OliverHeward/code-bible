@@ -1,0 +1,233 @@
+<!-- JS Introduction -->
+<!-- implementing a button command -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h2>What Can JavaScript Do?</h2>
+
+	<p>JavaScript can change HTML attribute values.</p>
+
+	<p>In this case JavaScript Changes the value of the src (source) attribute of an image.</p>
+
+	<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+	<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+	<button onclick="ducoment.getElementById('myImage').src="pic_bulboff.gif'">Turn off the light</button>
+
+</body>
+</html>
+
+<!-- JS WHERE TOO SCRIPT TAGGING-->
+<!-- In HTML, JavaScript code must be inserted between <script> and </script> tags -->
+
+<script>
+	document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+
+<!-- A JavaScript function is a block of JavaScript code, that can be executed when "called" for. 
+	For example, a function can be called when an event occurs, like when the user clicks a button. -->
+
+<!-- JavaScript can be placed in the <body>, or in the <head> section of an HTML page, or in both.
+	In this example, a JavaScript function is placed in the <head> section of a HTML page.
+		The function is called when a button is clicked: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Function Test</title>
+	<script>
+		function myFunction() {
+			document.getElementById("demo").innerHTML = "Paragraph changed.";
+		}
+	</script>
+</head>
+<body>
+	<h1>A Web Page</h1>
+	<p id="demo">A Paragraph</p>
+	<button type="button" onclick="myFunction()">Try it</button>
+</body>
+</html>
+
+<!-- Scripts can also be placed in external JavaScript files
+	so the function call of
+		function myFuction() {
+			document.getElementById("demo").innerHTML = "Paragraph changed.";
+		}
+	can be stored and called upon rather than written out,
+	this saves a bunch of code written into the HTML and cached JavaScript files can speed up page loading
+		to call upon this script you'd change it too -->
+
+<script src="scriptfile.js"></script>
+<script src="scriptfile2.js"></script>
+
+<!-- External scripts can be referenced with a full URL or a with path relative to the current web page
+	this example uses a full URL to link to a script -->
+
+<script src="http://www.w3schools.com/js/scriptfile.js"></script>
+
+<!-- From a local file located in a specified folder on the current web site -->
+
+<script src="/js/scriptfile.js"></script>
+
+
+<!-- JAVASCRIPT OUTPUT 
+	JavaScript Display Possibilities
+		Javascript can display data in different ways:
+			Writing into a HTML element, using innerHTML
+			Writing into the HTML output using document.write()
+			Writing into an alert box, using window.alert()
+			Writing into the browser console, using console.log() -->
+
+<!-- Using innerHTML
+		To access a HTML element, JavaScript can use the document.getElementById(id) method
+		To id attribute defines the HTML element. The innerHTML property defines the HTML content -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Output</title>
+</head>
+<body>
+	<h1>My First Web Page</h1>
+	<p>My First Paragraph</p>
+
+	<p id="demo"></p>
+	<script>
+		document.getElementById("demo").innerHTML = 5 + 6;
+	</script>
+</body>
+</html>
+
+<!-- for testing purposes, it is convenient to use document.write(): 
+	using a document.write after a HTML document is loaded, will delete all existing HTML-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Output</title>
+</head>
+<body>
+	<h1>My First Web Page</h1>
+	<p>My First Paragraph</p>
+
+	<button type="button" onclick="document.write(5 + 6)">Try It</button>
+</body>
+</html>
+
+<!-- the document.write() method should only be used for testing -->
+
+<!-- USING window.alert() 
+	You can use an alert box to display data -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Output</title>
+</head>
+<body>
+	<h1>My First Web Page</h1>
+	<p>My First Paragraph</p>
+
+	<script>
+		window.alert(5 + 6);
+	</script>
+</body>
+</html>
+
+<!-- using console.log() 
+	for debugging purposes, you can use the console.log() method to display data to check it runs correctly -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Output</title>
+</head>
+<body>
+	<script>
+		console.log(5 + 6);
+	</script>
+</body>
+</html>
+
+<!-- JAVASCRIPT STATEMENTS SEE NOTEPADJS.js -->
+
+<!-- writing the script directly into HTML -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript statements</title>
+</head>
+<body>
+	<h1>JavaScript Statements</h1>
+	<p>A <b>JavaScript Program</b> is a list of <b>statements</b> to be executed by a computer.</p>
+
+	<p id="demo"></p>
+
+	<script>
+		var = x, y, z,; // statement 1
+		x = 5; // statement 2
+		y = 6; // statement 3
+		z = x + y // statement 4
+
+	document.getElementById("demo").innerHTML = "The value of z is " + z + " . ";
+
+	</script>
+</body>
+</html>
+
+<!-- this script will execute that z is 11 -->
+
+<!-- JAVASCRIPT EVENTS (LINE 1097 CSS) -->
+ <!-- HTML events can be used in HTML pages, JavaScript can "react" on these events
+ 	A HTML event can be something the browser does, or something a user does.
+ 		Some examples of HTML events
+ 			A HTML Web Page has finished loading
+ 			A HTML Input field was changed
+ 			A HTML Button was clicked
+ 	Often whe events happen, you may want to do something
+ 	Javascript lets you execute code when events are detected
+ 	HTML allows event handler attributes, with JavaScript code, to be added to HTML elements -->
+ <element event="some JavaScript">
+ 	<!-- in the following example, a onclick attritube is added to a button element -->
+ <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+ 	<!-- Above, the JavaScript code changes the content of the element with id="demo"
+ 		In the next example, the code changes the content of its own element (using this.innerHTML) -->
+
+ <button onclick="this.innerHTML = Date()">The time is?</button>
+ 	<!-- JavaScript code is often several lines long, 
+ 			it is more comment to see the event attributes calling functions -->
+
+ <button onclick="displayDate()">The time is?</button>
+
+ <!-- COMMON HTML EVENTS
+ 		this is only a list of common ones, see bookmark HTML/CSS DOM
+ 	EVENT 							DESCRIPTION -->
+ <onchange></onchange>				A Html Element Has Been Changed
+ <onclick></onclick>				The user clicks a HTML Element
+ <onmouserover></onmouserover>		The user moves the mouse over a HTML element
+ <onmouseout></onmouseout>			The user moves the mouse away from a HTML element
+ <onkeydown></onkeydown>			The user pushes a keyboard key
+ <onload></onload>					The browser has finished loading the page
+
+<!-- What can JavaScript Do?
+	Evenet Handlers can be used to handle, and verify, user input, user actions and browser actions
+		Things that should be done every time a page loads
+		Things that should be done when the page is closed
+		Action that should be performed when a user clicks a button
+		Content that should be verified when a user inputs data
+		And more...
+
+	Many different methods can be used to let JavaScript work with events:
+		HTML event attributes can execute JavaScript code directly
+		HTML event attributes can call JavaScript functions 
+		You can assign your own event handler functions to HTML elements
+		You can prevent events from being sent or being handled
+	-->
+BACK TOO JS STRINGS LINE 1100 :) 
+
+

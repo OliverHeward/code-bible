@@ -1,0 +1,84 @@
+/* FLEXBOX 
+
+	The Flexbox layout (Flexible Box) module aims at providing a more efficient way to lay out,
+		align and distribute space among items in a container, even when their size is unknown and/or dynamic.
+
+	The main idea behind the flex layout is to give the container the ability to alter its;
+		width/height (and order) to best fill the available space.
+		(mostly to accomodate to all kind of display devices and screen sizes).
+	A flex container expands items to fill available free space, or shrinks them to prevent overflow.
+
+	Most importantly, the flexbox layout is direction-agnostic as opposed to the regular layouts,
+		(block which is vertically-based and inline with is horizontally-based). 
+		While those work well for page, they lack flexibility (no pun intended) to support large or complex applications,
+			(especially when it comes to orientation changing, resizing, stretching, shrinking, etc.)
+	
+	Flexbox layout is most appropriate to the components of an application, and small-scale layouts,
+		while the 'Grid layout' is intended for larger scale layouts.
+
+Flex items are placed within the 'Parent' Container (Flex Container). 
+	They become Children of the Parent (Flex Items) */
+
+
+/* DISPLAY
+	
+	This defines a flex container; inline or block depending on the given value.
+		It enable a flex context for all its direct children. */
+
+.container {
+	display: flex; /* or inline-flex */
+} /* NOTE - CSS columns have no effect on a flex container.
+
+
+
+
+/* ORDER
+	
+	By default, flex items are laid out in the source order.
+	However, the 'order' property controls the order in which they apper in the flex container. */
+
+.item {
+	order: <interger>; /* default is 0 */
+}
+
+
+/*  DISPLAY
+
+	This defines a flex container; Inline or block depending on the given value.
+		It enables a flex context for all its direct children. */
+
+.container {
+	display: flex; /* or inline-flex */
+} /* NOTE - CSS columns have no effect on a flex container.
+
+
+/* FLEX-DIRECTION
+
+	This establishes the main-axis, thus defining the direction flex items are placed in the flex container.
+		Flexbox is (aside from optional wrapping) a single-direction layout concept.
+		Think of flex items as primarily laying out either in the horizontal rows or vertical columns. */
+
+.container {
+	flex-direction: row | row-reverse | column | column-reverse;
+} 
+
+/* 		row (default): left to right in 'ltr'; right to left in 'rtl'
+		row-reverse: right to left in 'ltr'; left ro right in 'rtl'
+		column: same as 'row' but top to bottom;
+		column-reverse: same as 'row-reverse' but bottom to top.
+
+
+/* FLEX-GROW
+	
+	This defines the ability for a flex item to grow if necessary.
+		it accepts a unitless value that serves as a proportion.
+		It dictates what amount of the available space inside the flex container the item should take up.
+
+	If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children.
+		If one of the children has a value of 2, the remaining space would take up twice as much space as the others
+			(or it will try to, at least). */
+
+.item {
+	flex-grow: <number>; /* default 0 */
+} /* Negative numbers are invalid.
+
